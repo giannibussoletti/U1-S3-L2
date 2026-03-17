@@ -13,13 +13,22 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
     <title>Blog EPICODE</title>
+
+    <style>
+      .text-red {
+        color: brown;
+      }
+      .text-start {
+        text-align: start;
+      }
+    </style>
   </head>
   <body>
     <header>
       <img id="logo-epicode" src="./img/logo.svg" alt="Logo Epicode School" />
-      <p id="main-title">Epicode - Il blog dei developers</p>
+      <p id="title-p">Epicode - Il blog dei developers</p>
       <nav>
-        <ul>
+        <ul id="nav-links">
           <li>
             <a href="#"
               ><i
@@ -50,7 +59,7 @@
     </header>
     <main>
       <article>
-        <h2>Come creare un template per i post</h2>
+        <h2 id="first-title-main">Come creare un template per i post</h2>
         <p class="authornpublic">
           <i class="fa-solid fa-pencil fa-xs" style="color: rgb(128, 128, 128)"></i> di Mario Rossi
           - <i class="fa-solid fa-clock" style="color: rgb(128, 128, 128)"></i> pubblicato il
@@ -156,7 +165,7 @@
       <section class="news-wrap">
         <h3>Novità</h3>
         <p>Vuoi rimanere aggiornato su altre novità del blog? Iscriviti alla nostra newsletter:</p>
-        <form>
+        <form id="newsletter-form">
           <input type="email" placeholder="inserisci l'email" /><button>Iscriviti!</button>
         </form>
       </section>
@@ -191,6 +200,6 @@
         >
       </p>
     </footer>
-    <script src="./DOM.js"></script>
+    <script src="./DOM-manipulation.js"></script>
   </body>
 </html>
