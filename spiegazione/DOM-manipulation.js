@@ -40,7 +40,6 @@ navUl.innerHTML += `<li>quarto Elemento</li>`
 
 const navTitle = document.getElementById("title-p")
 // le classi dell'elemento sono a disposizione nella proprietà "classList"
-console.log(navTitle)
 
 navTitle.classList.add("text-red") //questo aggiunge la classe text-red all'elemento con l'id title-p
 // in cui possiamo lavorare nel file css
@@ -50,3 +49,35 @@ navTitle.classList.contains("text-red") // .contains controlla se quella class C
 
 // ASSEGNARE/RIMUOVERE stili inline agli elementi
 navTitle.style.border = "3px solid #fff" // dopo style si richiamerà direttamente lo stile CSS da modificare non si usano .add, .remove o simili
+
+//CAMBIARE GLI ATTRIBUTI DI UN TAG
+const logoImg = document.getElementById("logo-epicode")
+// se volessi cambiare per esempio il src
+// si usa .getAttribute("attributo") per ottenere cosa quell'attributo ha al suo interno
+logoImg.getAttribute("src")
+// con .setAttribute(nomeAttributo, valore) -> modifica l'attributo indicato
+//  andando a sostituire il suo contenuto
+logoImg.setAttribute("src", "https://placebear.com/100/50")
+
+// CREIAMO DEGLI ELEMENTI DA ZERO
+//  Per creare elemnti da zero si usa il metodo createElement()
+const newImg = document.createElement("img")
+
+newImg.setAttribute("src", "https://placebear.com/300/300")
+newImg.setAttribute("alt", "Big Bear")
+// l'elemento è stato creato ma non esiste da nessuna parte
+// per inserire un elemento nella pagina ci sono diversi modi;
+// quello più semplice è APPENDERLO
+// per fare questa cosa bisogna trovare il parent element, in questo caso il main
+const main = document.getElementsByTagName("main")[0]
+main.appendChild(newImg)
+
+newImg.classList.add("bear-class")
+
+const newP = document.createElement("p")
+newP.innerText = "Lorem Ipsum Lorem Ipsum Lorem"
+
+newP.classList.add("big-text")
+
+const formSection = document.getElementById("form-section")
+formSection.appendChild(newP)
