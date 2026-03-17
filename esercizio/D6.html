@@ -177,11 +177,8 @@
 
       const makeItClickable = function () {
         const h1 = document.getElementsByTagName("h1")[0]
-        const insideText = h1.innerText
-        for (let i = 0; i < 1; i++) {
-          const result = insideText.slice(0, -1)
-          h1.innerText = result
-        }
+        const result = h1.innerText.slice(0, -1)
+        h1.innerText = result
       }
       /* ESERCIZIO 10
                      Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
@@ -284,7 +281,6 @@
       const onClickChangingColor = () => {
         const h2 = document.getElementById("changeMyColor")
         h2.setAttribute("onclick", "changeColorWithRandom()")
-        console.log(h2)
       }
 
       onClickChangingColor()
