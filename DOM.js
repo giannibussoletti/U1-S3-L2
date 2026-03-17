@@ -44,4 +44,61 @@ console.log("titolo preso con getElementByID", sbagliato) // l'ID non esiste e q
 
 const listSpecial = document.getElementsByClassName("special-elements")
 // getElementsByClassName torna una COLLEZIONE di elementi (simile adun array!)
-console.log("titolo preso con getElementByID", listSpecial)
+console.log("lista presa con getElementsByClassName", listSpecial)
+// getElementsByClassName NON TORNA MAI UN EELEMENTO RIFERIMENTO SINGOLO! torna TUTTI gli elementi
+// dotati di quella classe sotto forma di "HTMLCollection" (una struttura molto simile ad un array
+// dotata di indici/posizioni, ciclabile con i cicli for ma NON dotata di metodi avanzati come map,
+// filter, reduce, forEach etc.
+const x = document.getElementsByClassName("table") // ritorna sempre un HTMLCollection, anche se l'argomento è singolo
+console.log("anche con un singolo elemento il getElementsByClassName ritorna sempre un array", x)
+
+// OCCHIO! la x è un'ARRAY (HTMLCollection) con dentro UN OGGETTO (la tabella!)
+
+const y = document.getElementsByClassName("xxxxxxxxxx")
+// y è un ARRAY VUOTO perché la classe xxxxxxxxxx non esiste, ma rimarrà sempre un ARRAY
+
+// le HTMLCollection sono delle strutture SIMILI agli array, ma non dei veri e propri array (mancano
+// i metodi avanzati che abbiamo visto ieri); però potete se volete convertire una HTMLCollection in un
+// vero e proprio array con lo SPREAD OPERATOR:
+
+const xComeArray = [...x] // un nuovo "guscio" con dentro tutti gli elementi di x
+
+// 3)tramite il NOME del TAG!
+const allTheParagraphs = document.getElementsByTagName("p")
+console.log("TUTTI I PARAGRAFI", allTheParagraphs)
+
+const allTheMains = document.getElementsByTagName("main")
+console.log("ARRAY DEI TAG NAME DELLA PAGINA", allTheMains)
+// allTheMains NON È IL TAG MAIN!
+// allTheMains[0] È IL TAG MAIN!
+
+// getElementsByTagName torna sempre un HTMLCollection di TUTTI gli elemnti dotati di quel determinato TAG
+// i, p, div, li, header, main etc...
+// fate SEMPRE attenzione a cosa è un ARRAY e cosa è un OGGETTO
+const z = document.getElementsByTagName("stefano") // non esiste <stefano>
+// z è un HTMLCollection vuota!
+
+// 4) tramite un SELETTORE CSS
+// Questo serve quando l'elemento che volete recuperare non ha magari ID
+// o si trova in una posizione scomoda
+// come selezioneremmo in CSS il secondo elemento della prima lista non ordinata? "nav ul li:nth-of-type(2)"
+
+const secondLi = document.querySelector("nav ul li:nth-of-type(2)")
+console.log("querySelector", secondLi)
+
+// il metodo querySelector permette di riciclare tutte le conoscenze
+// dei seletori CSS per recuperare gli elementi del DOM: si usa il selettore CSS;
+// se funziona in CSS, funziona in JS.
+// se il selettore ha più elementi prende sempre il PRIMO ELEMENTO di quelli che vengono selezionati
+// se il selettore non è valido ritorna NULL
+// Per selezionare i singoli elementi con classi o id bisogna utilizzare rispettivamente
+// il PUNTO(.) per le CLASSI e il CANCELLETTO(#) per gli ID
+
+// 5) PIÙ elementi selezionati tramite un SELETTORE CSS
+document.querySelectorAll("nav ul li") // TUTTI i li all'interno della nav
+
+// e) PIÙ elementi tramite un SELETTORE CSS
+const allNavLis = document.querySelectorAll("nav ul li") // torna TUTTI GLI <li> dentro le <ul> dentro i <nav>
+const allMainUlLis = document.querySelectorAll("#main-ul > li") // tutti gli <li> dentro l'elemento dotato di id "main-u
+// la differenza è che querySelectorAll torna SEMPRE un array!
+console.log(allMainUlLis)
