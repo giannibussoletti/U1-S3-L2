@@ -102,3 +102,11 @@ const allNavLis = document.querySelectorAll("nav ul li") // torna TUTTI GLI <li>
 const allMainUlLis = document.querySelectorAll("#main-ul > li") // tutti gli <li> dentro l'elemento dotato di id "main-u
 // la differenza è che querySelectorAll torna SEMPRE un array!
 console.log(allMainUlLis)
+
+// querySelectorAll() funziona COME querySelector() ma restituisce sempre un array (una NodeList in realtà)
+// colleziona tutti gli elementi che vengono colpiti da un selettore CSS fornito.
+// NB -> anche se gli elementi recuperati dal selettore CSS sono UNO SOLO, verrà restituito sotto forma
+// di array!
+
+// getElementById, querySelector -> ELEMENTO OPPURE NULL
+// getElementsByClassName, getElementsByTagName, querySelectorAl1 -> ARRAY DI ELEMENTI
