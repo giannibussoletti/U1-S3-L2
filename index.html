@@ -3,9 +3,194 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <title>Blog EPICODE</title>
   </head>
   <body>
-    <script src="./script.js"></script>
+    <header>
+      <img id="logo-epicode" src="./img/logo.svg" alt="Logo Epicode School" />
+      <p id="main-title">Epicode - Il blog dei developers</p>
+      <nav>
+        <ul>
+          <li>
+            <a href="#"
+              ><i
+                class="fa-solid fa-arrow-left-long fa-rotate-180"
+                style="color: rgb(255, 255, 255)"></i>
+              Home <i class="fa-solid fa-arrow-left-long" style="color: rgb(255, 255, 255)"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><i
+                class="fa-solid fa-arrow-left-long fa-rotate-180"
+                style="color: rgb(255, 255, 255)"></i>
+              Articoli <i class="fa-solid fa-arrow-left-long" style="color: rgb(255, 255, 255)"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><i
+                class="fa-solid fa-arrow-left-long fa-rotate-180"
+                style="color: rgb(255, 255, 255)"></i>
+              lavora con noi
+              <i class="fa-solid fa-arrow-left-long" style="color: rgb(255, 255, 255)"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <h2>Come creare un template per i post</h2>
+        <p class="authornpublic">
+          <i class="fa-solid fa-pencil fa-xs" style="color: rgb(128, 128, 128)"></i> di Mario Rossi
+          - <i class="fa-solid fa-clock" style="color: rgb(128, 128, 128)"></i> pubblicato il
+          25-10-2020
+        </p>
+        <p>
+          La prima cosa da fare è suddividere in blocchi logici la pagina, identificando le
+          <b>parti comuni</b> da applicare a tutte le pagine
+        </p>
+        <p></p>
+        <ul>
+          <li>Contenuti di intestazione del tag <code>&lt;header&gt;</code></li>
+          <li>
+            Contenuti centrali variabili del tag <code>&lt;main&gt;</code> &#40;corpo
+            principale&#41;
+          </li>
+          <li>Contenuti di fine pagina comuni, da inserire nel tag <code>&lt;footer&gt;</code></li>
+        </ul>
+      </article>
+      <article>
+        <h2>Formattazione del codice</h2>
+        <p>
+          Il testo dell'articolo dovrà essere formattato per identificare tutte le parti da
+          <b>selezionare con i CSS. </b> Perciò i passi saranno:
+        </p>
+        <ol>
+          <li class="special-elements">
+            Progettare su carta il markup finale, assegnando ad ogni specifico testo il tag
+            appropriato
+          </li>
+          <li class="special-elements">
+            Scrivere l'HTML dai tag esterni a quelli interni e dall'alto verso il basso
+          </li>
+          <li class="special-elements">Applicare gli stili CSS</li>
+        </ol>
+        <p>
+          L'applicazione di stili CSS è cresciuta negli anni fino a raggiungere la diffusione
+          pressoché totale.
+        </p>
+
+        <table>
+          <caption>
+            Diffusione dei CSS
+          </caption>
+          <thead>
+            <tr>
+              <th><br />Anno</th>
+              <th>&#37; di utilizzo</th>
+              <th>Supporto Broswer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2000</td>
+              <td>20&#37;</td>
+              <td>17&#37;</td>
+            </tr>
+            <tr>
+              <td>2002</td>
+              <td>35&#37;</td>
+              <td>22&#37;</td>
+            </tr>
+            <tr>
+              <td>2004</td>
+              <td>45&#37;</td>
+              <td>42&#37;</td>
+            </tr>
+            <tr>
+              <td>2008</td>
+              <td>80&#37;</td>
+              <td>51&#37;</td>
+            </tr>
+            <tr>
+              <td>2012</td>
+              <td>100&#37;</td>
+              <td>76&#37;</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+      <section>
+        <p>
+          Un test di validazione potrà essere fatto tramite il
+          <span id="tool-online">tool online</span> dedicato allo scopo. Una volta ottimizzato il
+          tutto, avremo raggiunto il nostro obiettivo ed essere stati dei veri developers come loro:
+        </p>
+        <iframe
+          src="https://www.youtube.com/embed/jNQXAC9IVRw?si=SC8IbkGWWzQSCRDg"
+          title="YouTube video player"
+          frameborder="0"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+            web-share;
+          "
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </section>
+      <section class="news-wrap">
+        <h3>Novità</h3>
+        <p>Vuoi rimanere aggiornato su altre novità del blog? Iscriviti alla nostra newsletter:</p>
+        <form>
+          <input type="email" placeholder="inserisci l'email" /><button>Iscriviti!</button>
+        </form>
+      </section>
+      <div>
+        <h3>Articoli Correlati</h3>
+        <div class="news-wrap related-art">
+          <a href="#">Validare il codice HTML</a>
+          <p><i class="fa-solid fa-tag" style="color: rgb(0, 0, 0)"></i> Categoria: develop</p>
+          <p><i class="fa-solid fa-calendar" style="color: rgb(0, 0, 0)"></i> Data: 18-9-2020</p>
+        </div>
+        <div class="news-wrap related-art">
+          <a href="#">Validare il codice HTML</a>
+          <p><i class="fa-solid fa-tag" style="color: rgb(0, 0, 0)"></i> Categoria: develop</p>
+          <p><i class="fa-solid fa-calendar" style="color: rgb(0, 0, 0)"></i> Data: 16-9-2020</p>
+        </div>
+        <div class="news-wrap related-art">
+          <a href="#">Meno Kb nella pagina</a>
+          <p>
+            <i class="fa-solid fa-tag" style="color: rgb(0, 0, 0)"></i> Categoria: ottimizzazione
+          </p>
+          <p><i class="fa-solid fa-calendar" style="color: rgb(0, 0, 0)"></i> Data: 30-9-2020</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Blog Epicode &#169;2023</p>
+      <p>
+        <i
+          >Testata online di Mario Rossi, registrata con prot. n.213/2018 - via Luigi Einaudi 2 -
+          Milano. P.IVA 00112233.
+          <a href="mailto:info@epicode.school">info&#64;epicode.school</a></i
+        >
+      </p>
+    </footer>
+    <script src="./DOM.js"></script>
   </body>
 </html>

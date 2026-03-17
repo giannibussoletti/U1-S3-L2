@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  max-width: 428px;
+  margin: 0 auto;
+  padding: 2em;
+  background-image: url(../img/sfondo.png);
+}
+
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 2.2em;
+  line-height: 1.4em;
+  margin: 0;
+}
+
+h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 1em 0;
+}
+
+p,
+ul,
+ol,
+table {
+  font-size: 1.3em;
+  margin-bottom: 1em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+header {
+  background: #006587;
+  background: linear-gradient(0deg, rgba(0, 101, 135, 1) 0%, rgba(0, 156, 197, 1) 100%);
+  box-sizing: content-box;
+  padding: 3em 1em;
+  box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.336);
+  text-align: center;
+}
+
+nav,
+header p {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+header p {
+  color: white;
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+header img {
+  width: 80%;
+  min-width: 190px;
+  text-align: center;
+}
+
+main,
+footer,
+.news-wrap {
+  margin-top: 2em;
+}
+
+main {
+  background-color: white;
+  box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.336);
+  padding: 2em 1.5em;
+}
+
+.authornpublic {
+  color: grey;
+}
+
+main b {
+  font-weight: 600;
+  color: #a91f73;
+}
+
+main code {
+  background-color: rgb(228, 228, 228);
+  border-radius: 0.3em;
+  border: 2px solid gray;
+}
+
+table {
+  border-bottom: 3px solid #425d9b;
+}
+
+table caption {
+  font-style: italic;
+  font-weight: 500;
+  margin-bottom: 0.4em;
+}
+
+thead {
+  background-color: #425d9b;
+  color: white;
+}
+
+th,
+td {
+  padding: 1em;
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: rgb(244, 244, 244);
+  border-style: solid none;
+  border-width: 2px;
+  border-color: rgb(204, 204, 204);
+}
+
+#tool-online,
+.related-art a {
+  text-decoration: underline;
+  font-weight: 600;
+  color: #009cc5;
+}
+
+iframe {
+  width: 100%;
+  min-height: 200px;
+  border-radius: 3em;
+}
+
+.news-wrap {
+  background-color: rgb(228, 228, 228);
+  padding: 1em;
+}
+
+.news-wrap h3 {
+  margin: 0;
+}
+
+.news-wrap form input {
+  height: 2.5em;
+  width: 240px;
+  border-style: none none dashed none;
+}
+
+.news-wrap form input[placeholder="inserisci l'email"] {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1em;
+  padding-left: 0.5em;
+}
+
+.news-wrap button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  background-color: #3466da;
+  border: none;
+  border-radius: 0;
+  color: white;
+  margin: 0.5em;
+  padding: 0.3em;
+}
+
+.related-art {
+  border: 2px solid rgb(204, 204, 204);
+}
+
+.related-art a {
+  font-size: 1.5em;
+  margin: 5px 0 1px 0;
+}
+
+.related-art p:nth-child(2) {
+  margin: 0;
+}
+
+.related-art p:last-child {
+  font-size: 1em;
+  text-align: end;
+}
+
+footer {
+  box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.336);
+  background: linear-gradient(0deg, rgb(18, 56, 68) 0%, rgb(56, 105, 117) 100%);
+  color: white;
+  padding: 0.8em 2em 2.5em 2em;
+  text-align: center;
+}
+
+footer a {
+  font-weight: 500;
+  color: rgb(255, 0, 255);
+}
