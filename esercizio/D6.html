@@ -159,7 +159,7 @@
 
       const paintItGreen = function () {
         const backgroundGreen = document.querySelectorAll("ul")
-        console.log(backgroundGreen)
+
         for (let i = 0; i < backgroundGreen.length; i++) {
           backgroundGreen[i].style.backgroundColor = "green"
         }
@@ -169,21 +169,46 @@
       /* ESERCIZIO 9
          Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
         */
+      const assignOnClick = () => {
+        const h1 = document.getElementsByTagName("h1")[0]
+        h1.setAttribute("onclick", "makeItClickable()")
+      }
+      assignOnClick()
 
-      const makeItClickable = function () {}
-      makeItClickable()
+      const makeItClickable = function () {
+        const h1 = document.getElementsByTagName("h1")[0]
+        const insideText = h1.innerText
+        for (let i = 0; i < 1; i++) {
+          const result = insideText.slice(0, -1)
+          h1.innerText = result
+        }
+      }
       /* ESERCIZIO 10
          Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
         */
 
-      const revealFooterLink = function () {}
+      const assignAlertFooter = () => {
+        const anchorFooter = document.querySelector("footer a")
+        anchorFooter.setAttribute("onclick", "revealFooterLink()")
+      }
+      assignAlertFooter()
+
+      const revealFooterLink = function () {
+        const srcAttributeFooter = document.querySelector("footer a").getAttribute("href")
+        alert(srcAttributeFooter)
+      }
 
       /* ESERCIZIO 11
          Crea una funzione che crei una tabella nell'elemento con id "tableArea".
          La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
       */
 
-      const generateTable = function () {}
+      const generateTable = function () {
+        const tableSection = document.getElementById("tableArea")
+        const tableCreation = document.createElement("table")
+        console.log(tableCreation)
+      }
+      generateTable()
 
       /* ESERCIZIO 12
          Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
